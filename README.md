@@ -1,4 +1,4 @@
-# Mini Bootstrap Grid
+# Layouta
 
 A lightweight, Bootstrap-inspired grid system built around a single file: [`layout.css`](./layout.css).
 
