@@ -16,7 +16,7 @@ It gives you familiar container, row, column, offset, alignment, and order utili
 ## File Structure
 
 ```text
-Mini-bootstrap/
+Layouta/
 ├── layout.css
 └── README.md
 ```
@@ -52,13 +52,13 @@ flowchart LR
 ## Breakpoints
 
 | Breakpoint | Min Width | Container Max Width |
-| --- | ---: | ---: |
-| Base | 0px | `100%` |
-| `sm` | `576px` | `540px` |
-| `md` | `768px` | `720px` |
-| `lg` | `992px` | `960px` |
-| `xl` | `1200px` | `1140px` |
-| `xxl` | `1400px` | `1320px` |
+| ---------- | --------: | ------------------: |
+| Base       |       0px |              `100%` |
+| `sm`       |   `576px` |             `540px` |
+| `md`       |   `768px` |             `720px` |
+| `lg`       |   `992px` |             `960px` |
+| `xl`       |  `1200px` |            `1140px` |
+| `xxl`      |  `1400px` |            `1320px` |
 
 ## Quick Start
 
@@ -101,32 +101,32 @@ flowchart TB
 
 ### Containers
 
-| Class | Purpose |
-| --- | --- |
-| `.container` | Responsive container that changes max width at each breakpoint |
-| `.container-fluid` | Always full width |
-| `.container-sm` | Locks to the `sm` container width and above |
-| `.container-md` | Locks to the `md` container width and above |
-| `.container-lg` | Locks to the `lg` container width and above |
-| `.container-xl` | Locks to the `xl` container width and above |
-| `.container-xxl` | Locks to the `xxl` container width and above |
+| Class                   | Purpose                                                        |
+| ----------------------- | -------------------------------------------------------------- |
+| `.container`       | Responsive container that changes max width at each breakpoint |
+| `.container-fluid` | Always full width                                              |
+| `.container-sm`    | Locks to the `sm` container width and above                    |
+| `.container-md`    | Locks to the `md` container width and above                    |
+| `.container-lg`    | Locks to the `lg` container width and above                    |
+| `.container-xl`    | Locks to the `xl` container width and above                    |
+| `.container-xxl`   | Locks to the `xxl` container width and above                   |
 
 ### Rows and Gutters
 
-| Class | Purpose |
-| --- | --- |
-| `.row` | Flex row with wrapping and grid gutters |
-| `.g-0` to `.g-5` | Set horizontal and vertical gutter together |
-| `.gx-0` to `.gx-5` | Set horizontal gutter only |
-| `.gy-0` to `.gy-5` | Set vertical gutter only |
+| Class                        | Purpose                                     |
+| ---------------------------- | ------------------------------------------- |
+| `.row`                  | Flex row with wrapping and grid gutters     |
+| `.g-0` to `.g-5`   | Set horizontal and vertical gutter together |
+| `.gx-0` to `.gx-5` | Set horizontal gutter only                  |
+| `.gy-0` to `.gy-5` | Set vertical gutter only                    |
 
 ### Columns
 
-| Class Type | Example | Purpose |
-| --- | --- | --- |
-| Auto fill | `.col` | Even-width flexible columns |
-| Auto size | `.col-auto` | Width based on content |
-| Base span | `.col-6` | Applies on all screen sizes |
+| Class Type      | Example          | Purpose                             |
+| --------------- | ---------------- | ----------------------------------- |
+| Auto fill       | `.col`      | Even-width flexible columns         |
+| Auto size       | `.col-auto` | Width based on content              |
+| Base span       | `.col-6`    | Applies on all screen sizes         |
 | Responsive span | `.col-md-6` | Applies at the breakpoint and above |
 
 Supported responsive prefixes:
@@ -141,9 +141,9 @@ Each span supports `1` through `12`.
 
 ### Offsets
 
-| Class Type | Example |
-| --- | --- |
-| Base offset | `.offset-3` |
+| Class Type        | Example             |
+| ----------------- | ------------------- |
+| Base offset       | `.offset-3`    |
 | Responsive offset | `.offset-lg-2` |
 
 Supported offsets:
@@ -153,27 +153,27 @@ Supported offsets:
 
 ### Row Alignment
 
-| Class | Purpose |
-| --- | --- |
-| `.justify-start` | Align items to the start |
-| `.justify-end` | Align items to the end |
-| `.justify-center` | Center items horizontally |
-| `.justify-between` | Space between items |
-| `.justify-around` | Space around items |
-| `.justify-evenly` | Equal spacing |
-| `.align-start` | Align items to the top |
-| `.align-end` | Align items to the bottom |
-| `.align-center` | Center items vertically |
-| `.align-stretch` | Stretch items |
-| `.align-baseline` | Align to text baseline |
+| Class                   | Purpose                   |
+| ----------------------- | ------------------------- |
+| `.justify-start`   | Align items to the start  |
+| `.justify-end`     | Align items to the end    |
+| `.justify-center`  | Center items horizontally |
+| `.justify-between` | Space between items       |
+| `.justify-around`  | Space around items        |
+| `.justify-evenly`  | Equal spacing             |
+| `.align-start`     | Align items to the top    |
+| `.align-end`       | Align items to the bottom |
+| `.align-center`    | Center items vertically   |
+| `.align-stretch`   | Stretch items             |
+| `.align-baseline`  | Align to text baseline    |
 
 ### Order Utilities
 
-| Class | Purpose |
-| --- | --- |
-| `.order-first` | Move item to the beginning |
-| `.order-last` | Move item to the end |
-| `.order-0` to `.order-5` | Manual order control |
+| Class                              | Purpose                    |
+| ---------------------------------- | -------------------------- |
+| `.order-first`                | Move item to the beginning |
+| `.order-last`                 | Move item to the end       |
+| `.order-0` to `.order-5` | Manual order control       |
 
 ## Examples
 
@@ -205,7 +205,9 @@ Supported offsets:
 ```html
 <div class="container">
 	<div class="row">
-		<div class="col-12 col-md-6 offset-md-3">Centered block</div>
+		<div class="col-12 col-md-6 offset-md-3">
+			Centered block
+		</div>
 	</div>
 </div>
 ```
@@ -224,7 +226,7 @@ Supported offsets:
 
 ## Custom Container Widths
 
-One of the main advantages of this grid is that you can override container width without creating extra container classes.
+One of the main advantages of this grid is that you can override `--container-max` without creating extra container classes.
 
 ```css
 .hero .container {
@@ -271,6 +273,7 @@ You can tune the system globally from `:root`.
 
 - Base `.col-*` classes apply on mobile too.
 - Use `.col-md-*` or `.col-lg-*` if you want stacking on smaller screens first.
+- Includes a minimal base reset: `html { box-sizing: border-box; }` and `body { margin: 0; padding: 0; }`.
 - Offsets use logical properties, which makes the grid friendlier for RTL layouts.
 - The system is intentionally focused on layout only. It does not include typography, buttons, forms, or components.
 
